@@ -3,117 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xác minh</title>
+  <title>Đang chuyển hướng...</title>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "https://gaviet.top";
+    }, 2000);
+  </script>
 
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #f1f3f5;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      padding-top: 80px;
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#050505;
+      font-family:Arial,sans-serif;
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
 
-    .box {
-      width: 90%;
-      max-width: 330px;
-      text-align: center;
+    .box{
+      text-align:center;
     }
 
-    .notice {
-      background: #fff3cd;
-      color: #8a6d00;
-      font-weight: bold;
-      padding: 14px 12px;
-      border-radius: 8px;
-      margin-bottom: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    .loader{
+      width:65px;
+      height:65px;
+      border:5px solid #444;
+      border-top:5px solid #ffd000;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+      margin:0 auto;
     }
 
-    .card {
-      background: white;
-      padding: 18px;
-      border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    @keyframes spin{
+      to{
+        transform:rotate(360deg);
+      }
     }
 
-    .title {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: #222;
+    h2{
+      margin-top:25px;
+      font-size:30px;
     }
 
-    .question {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: #000;
-    }
-
-    input {
-      width: 100%;
-      padding: 13px;
-      font-size: 20px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      margin-bottom: 12px;
-      box-sizing: border-box;
-    }
-
-    button {
-      width: 100%;
-      padding: 13px;
-      font-size: 20px;
-      border: none;
-      border-radius: 4px;
-      background: #1a73e8;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #155fc0;
-    }
-
-    .line {
-      height: 5px;
-      background: #e5e5e5;
-      border-radius: 10px;
-      margin-top: 14px;
+    p{
+      color:#ccc;
+      font-size:18px;
     }
   </style>
 </head>
 
 <body>
-  <div class="box">
-    <div class="notice">
-      Bạn Đang Vào Trang Gà Bảo Sting !
-                .Vui lòng trả lời câu hỏi phía dưới !
-    </div>
 
-    <div class="card">
-      <div class="title">Xác minh bạn là con người</div>
-      <div class="question">2 + 3 = Bao nhiêu?</div>
+<div class="box">
+  <div class="loader"></div>
+  <h2>Bạn đang vào trang gà Bảo Sting...</h2>
+  <p>Vui lòng đợi 3 giây....</p>
+</div>
 
-      <input type="text" id="answer" placeholder="">
-      <button onclick="verify()">Xác nhận</button>
-
-      <div class="line"></div>
-    </div>
-  </div>
-
-  <script>
-    function verify() {
-      let ans = document.getElementById("answer").value.trim();
-
-      if (ans === "5") {
-        window.location.href = "https://gaviet.top";
-      } else {
-        alert("Sai rồi! Vui lòng thử lại.");
-      }
-    }
-  </script>
 </body>
 </html>
